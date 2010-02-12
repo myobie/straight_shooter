@@ -14,7 +14,7 @@ class Page < Qt::Object
   def initialize(url, filename = nil)
     super()
     
-    new_app
+    app # to init the app
     
     self.url = url
     self.filename = filename ? filename.gsub(/.png$/, "") + ".png" : url.split("//").last.split("/").first + ".png"
