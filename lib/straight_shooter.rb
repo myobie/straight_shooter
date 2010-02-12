@@ -12,7 +12,7 @@ class StraightShooter
   
   def initialize(url, filename = nil)
     self.app = Qt::Application.new(ARGV)
-    self.page = Page.new(ARGV[0], ARGV[1])
+    self.page = Page.new(url, filename)
     page.connect(page, SIGNAL('finished(bool)'), app, SLOT('quit()'))
   end
   
