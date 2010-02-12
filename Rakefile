@@ -5,9 +5,9 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "straight_shooter"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
-    gem.email = "myobie@mac.com"
+    gem.summary = %Q{Taking screenshots of web sites is no longer hard}
+    gem.description = %Q{Takes screenshots of sites using WebKit and Qt}
+    gem.email = "nathan@myobie.com"
     gem.homepage = "http://github.com/myobie/straight_shooter"
     gem.authors = ["Nathan Herald"]
     gem.add_development_dependency "bacon", ">= 0"
