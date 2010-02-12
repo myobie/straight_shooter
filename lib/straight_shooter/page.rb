@@ -7,10 +7,6 @@ class Page < Qt::Object
 
   attr_accessor :url, :filename, :web, :page
 
-  def app
-    @app ||= Qt::Application.new(ARGV)
-  end
-
   def initialize(url, filename = nil)
     super()
     
@@ -49,11 +45,7 @@ class Page < Qt::Object
       puts "Page failed to load. No image was saved."
     end
 
-    quit_app
-  end
-  
-  def quit_app
-    app.quit
+    App.quit
   end
 
 end

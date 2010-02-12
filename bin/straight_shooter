@@ -4,4 +4,8 @@ unless ARGV.length > 0
   puts "usage: xvfb-run -a straight_shooter http://google.com result.png"
 end
 
+App = Qt::Application.new(ARGV)
+
 Page.new(ARGV[0], ARGV[1]).load!
+
+App.exec
