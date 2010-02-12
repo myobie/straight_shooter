@@ -20,6 +20,8 @@ See the ubuntu-setup.sh file for a nice script to install everything you need fo
 
 ## TODO
 
+* Better color depth
+* Fonts!
 * Make it possible to start xvfb if it's not already running and have Qt use it for rendering
 * How to run without xvfb?
 * Prereq install instructions for more platforms
