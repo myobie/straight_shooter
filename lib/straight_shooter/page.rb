@@ -3,14 +3,13 @@ require "qtwebkit"
 
 class Page < Qt::Object
 
+  signals 'finished(bool)'
   slots 'started()', 'render(bool)'
 
   attr_accessor :url, :filename, :web, :page
 
   def initialize(url, filename = nil)
     super()
-    
-    app # to init the app
     
     self.url = url
     self.filename = filename ? filename.gsub(/.png$/, "") + ".png" : url.split("//").last.split("/").first + ".png"
@@ -45,7 +44,7 @@ class Page < Qt::Object
       puts "Page failed to load. No image was saved."
     end
 
-    App.quit
+    emit finished(ok)
   end
 
 end
